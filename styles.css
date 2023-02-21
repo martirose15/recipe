@@ -1,0 +1,418 @@
+/* TEXT AND BACKGROUND STYLES */
+html {
+    background-color: rgba(122, 191, 191, .5);
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+h1,
+h2,
+h3,
+nav a,
+nav span,
+menu li,
+#social li,
+footer {
+    font-family: 'Bebas Neue', cursive;
+}
+
+p,
+dd,
+li,
+nav,
+input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+dt {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+nav a,
+nav span,
+menu li,
+#social li,
+footer {
+    font-size: 20px;
+}
+
+/* FIND WHERE NAV SPAN SHOULD GO */
+
+.hidden {
+    visibility: hidden;
+    height: 0px;
+}
+
+#sidedish {
+    background-color: #7ABFBF;
+}
+
+#sidedish h1 {
+    text-align: center;
+}
+
+footer {
+    background-color: #ffffff;
+}
+
+/* LAYOUT */
+body {
+    width: 414px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+}
+
+form {
+    position: relative;
+    left: 20%;
+    bottom: 10%;
+}
+
+.header {
+    position: relative;
+    bottom: 4560px;
+    height: 110px;
+    box-shadow: 0px 4px 10px gray;
+    background-color: white;
+}
+
+section h1 {
+    padding-left: 10px;
+}
+
+#streettacos {
+    position: relative;
+    top: 70px;
+}
+
+#streettacos h1 {
+    position: relative;
+    top: 63px;
+    left: 106px;
+}
+
+#streettacos ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#ingredients li {
+    padding: 5px;
+}
+
+#details dd {
+    position: relative;
+    left: 70px;
+    bottom: 18px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+}
+
+hgroup {
+    height: 200px;
+    position: relative;
+    bottom: 70px;
+}
+
+hgroup h2 {
+    position: relative;
+    left: 151px;
+    top: 69px;
+}
+
+hgroup img {
+    width: 27%;
+    padding: 10px;
+}
+
+hgroup dd {
+    font-weight: 700;
+    position: relative;
+    right: 50px;
+    top: 7px;
+}
+
+hgroup dt {
+    font-weight: 400;
+    position: relative;
+    right: 10px;
+    top: 0px;
+}
+
+hgroup dl {
+    position: relative;
+    left: 160px;
+    bottom: 100px;
+}
+
+hgroup svg {
+    position: relative;
+    left: -11px;
+    top: 10px;
+    fill: #EB5428;
+}
+
+.fourstars .star5 {
+    fill: #ffffff;
+}
+
+ol li {
+    padding: 10px;
+}
+
+#social ul {
+    display: flex;
+    width: 414px;
+    justify-content: space-between;
+    position: relative;
+    right: 68px;
+    bottom: 73px;
+}
+
+#social li a {
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+
+footer img {
+    width: 70%;
+    position: relative;
+    left: 60px;
+    bottom: 120px;
+}
+
+footer p {
+    position: relative;
+    left: 3px;
+    top: 278px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* search bar */
+#search input {
+    display: contents;
+}
+
+.svg {
+    background-color: #EB5428;
+    position: absolute;
+    top: 0px;
+    left: 228px;
+    width: 38px;
+    height: 42px;
+}
+
+#logo {
+    background-color: #EB5428;
+    position: relative;
+    bottom: 149px;
+    left: 33px;
+    width: 68%;
+}
+
+.logoicon {
+    position: relative;
+    left: 100px;
+    top: 5px;
+}
+
+form input {
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 55%;
+    height: 42px;
+    border: 2px solid #EB5428;
+}
+
+#details,
+#directions,
+#ingredients,
+#sidedish {
+    position: relative;
+    top: 60px;
+}
+
+/* NAVIGATION */
+nav li,
+a {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+/* HAMBURGER MENU */
+/* menu.txt file mobile first style */
+.header ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px;
+    position: relative;
+    user-select: none;
+    background-color: black;
+    top: -23px;
+}
+
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+
+label span:before,
+label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label span:before {
+    top: 5px;
+}
+
+label span:after {
+    top: -5px;
+}
+
+#menu input {
+    display: none;
+}
+
+#menu input:checked~ul {
+    max-height: 500px;
+}
+
+#menu input:checked~label span {
+    background: transparent;
+}
+
+#menu input:checked~label span:before {
+    transform: rotate(-45deg);
+}
+
+#menu input:checked~label span:after {
+    transform: rotate(45deg);
+}
+
+#menu input:checked~label:not(.steps) span:before,
+#menu input:checked~label:not(.steps) span:after {
+    top: 0;
+}
+
+/*MEDIA QUERIES*/
+
+/* when viewport >= 768px, display css */
+@media screen and (min-width:768px) {
+    body {
+        width: 768px;
+    }
+
+    .header {
+        bottom: 6251px;
+        height: 190px;
+    }
+
+    form {
+        left: 50%;
+        bottom: 76%;
+    }
+
+    form input {
+        width: 31%;
+    }
+
+    #logo {
+        bottom: 102px;
+        left: -117px;
+        width: 13%;
+        height: 77px;
+    }
+
+    .logoicon {
+        left: 1px;
+        top: 24px;
+    }
+
+    label {
+        cursor: pointer;
+        display: none;
+        padding: 0;
+        position: relative;
+        user-select: none;
+        background-color: white;
+        top: 0;
+    }
+
+    .header ul {
+        overflow: visible;
+        display: flex;
+        max-height: 200px;
+        height: 80px;
+        justify-content: space-between;
+    }
+
+    .header nav ul li {
+        position: relative;
+        right: 150px;
+        padding: 18px;
+    }
+
+    #topitem {
+        visibility: hidden;
+    }
+
+    #avatartext {
+        position: relative;
+        bottom: 54px;
+        right: 41px;
+        display: block;
+        width: 100px;
+    }
+
+    .avataricon {
+        position: relative;
+        bottom: 20px;
+        right: 45px;
+    }
