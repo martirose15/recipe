@@ -93,7 +93,6 @@ form {
 
 .header {
     position: relative;
-    bottom: 4560px;
     height: 110px;
     box-shadow: 0px 4px 10px gray;
     background-color: white;
@@ -349,10 +348,7 @@ label span:after {
         width: 768px;
     }
 
-    .header {
-        bottom: 6251px;
-        height: 190px;
-    }
+
 
     form {
         left: 50%;
