@@ -54,8 +54,6 @@ footer {
     font-size: 20px;
 }
 
-/* FIND WHERE NAV SPAN SHOULD GO */
-
 .hidden {
     visibility: hidden;
     height: 0px;
@@ -87,13 +85,14 @@ img {
 
 form {
     position: relative;
-    left: 20%;
-    bottom: 10%;
+    left: 21%;
+    top: -94%;
 }
 
 .header {
-    position: relative;
-    height: 110px;
+    position: absolute;
+    height: 60px;
+    width: 414px;
     box-shadow: 0px 4px 10px gray;
     background-color: white;
 }
@@ -104,7 +103,7 @@ section h1 {
 
 #streettacos {
     position: relative;
-    top: 70px;
+    top: 5px;
 }
 
 #streettacos h1 {
@@ -116,6 +115,10 @@ section h1 {
 #streettacos ul {
     display: flex;
     flex-direction: row;
+}
+
+#streettacos svg {
+    padding-right: 10px;
 }
 
 #ingredients li {
@@ -133,47 +136,47 @@ aside {
     flex-direction: column;
 }
 
-hgroup {
+.hgroup {
     height: 200px;
     position: relative;
     bottom: 70px;
 }
 
-hgroup h2 {
+.hgroup h2 {
     position: relative;
     left: 151px;
     top: 69px;
 }
 
-hgroup img {
+.hgroup img {
     width: 27%;
     padding: 10px;
 }
 
-hgroup dd {
+.hgroup dd {
     font-weight: 700;
     position: relative;
     right: 50px;
     top: 7px;
 }
 
-hgroup dt {
+.hgroup dt {
     font-weight: 400;
     position: relative;
     right: 10px;
     top: 0px;
 }
 
-hgroup dl {
+.hgroup dl {
     position: relative;
     left: 160px;
     bottom: 100px;
 }
 
-hgroup svg {
+.hgroup svg {
     position: relative;
-    left: -11px;
-    top: 10px;
+    left: 149px;
+    top: -102px;
     fill: #EB5428;
 }
 
@@ -191,13 +194,14 @@ ol li {
     justify-content: space-between;
     position: relative;
     right: 68px;
-    bottom: 73px;
+    bottom: 38px;
 }
 
 #social li a {
     position: relative;
     top: 20px;
     left: 50px;
+    color: #EB5428;
 }
 
 footer img {
@@ -216,7 +220,6 @@ footer p {
     text-transform: uppercase;
 }
 
-/* search bar */
 #search input {
     display: contents;
 }
@@ -225,30 +228,32 @@ footer p {
     background-color: #EB5428;
     position: absolute;
     top: 0px;
-    left: 228px;
+    left: 198px;
     width: 38px;
     height: 42px;
 }
 
 #logo {
-    background-color: #EB5428;
-    position: relative;
-    bottom: 149px;
-    left: 33px;
+    /* background-color: #EB5428; */
+    position: absolute;
+    bottom: -1px;
+    left: 17%;
     width: 68%;
 }
 
 .logoicon {
     position: relative;
-    left: 100px;
-    top: 5px;
+    left: 48px;
+    top: -66px;
+    width: 67%;
+    background: #EB5428;
 }
 
 form input {
     font-weight: bold;
     padding: 10px;
     margin-bottom: 10px;
-    width: 55%;
+    width: 48%;
     height: 42px;
     border: 2px solid #EB5428;
 }
@@ -270,74 +275,86 @@ a {
 
 
 /* HAMBURGER MENU */
-/* menu.txt file mobile first style */
-.header ul {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-}
 
-label {
-    cursor: pointer;
-    display: inline-block;
-    padding: 28px;
-    position: relative;
-    user-select: none;
-    background-color: black;
-    top: -23px;
-}
-
-label span {
-    background-color: #ffffff;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background-color .2s ease-out;
-    width: 18px;
-}
-
-label span:before,
-label span:after {
-    background: #ffffff;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-
-label span:before {
-    top: 5px;
-}
-
-label span:after {
-    top: -5px;
-}
-
-#menu input {
+/* Hide the menu content by default */
+.dropdown-content {
     display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
 }
 
-#menu input:checked~ul {
-    max-height: 500px;
+/* Display when hover/click on the menu icon */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
-#menu input:checked~label span {
-    background: transparent;
+
+/* Style the images */
+.dropdown-content img {
+    margin-right: 30px;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    right: 48px;
+    bottom: 20px;
 }
 
-#menu input:checked~label span:before {
-    transform: rotate(-45deg);
+/* Style the menu items */
+.dropdown-content li {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 12px;
 }
 
-#menu input:checked~label span:after {
-    transform: rotate(45deg);
+/* Align the menu items */
+.dropdown-content ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 
-#menu input:checked~label:not(.steps) span:before,
-#menu input:checked~label:not(.steps) span:after {
-    top: 0;
+/* Style the SVG icon */
+
+.dropdown svg {
+    position: relative;
+    bottom: 16px;
+    right: 40px;
+}
+
+.dropdown #menu {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    color: #0d0d0d;
+}
+
+#streettacos a {
+    color: #EB5428;
+}
+
+li #avatar {
+    position: absolute;
+    bottom: -1px;
+    left: 89%;
+}
+
+#avatartext {
+    position: absolute;
+    top: 24%;
+    right: -25px;
+    color: #0d0d0d;
+}
+
+.avataricon {
+    position: relative;
+    bottom: 15px;
+    right: 45px;
+}
+
+.dropdown-content span {
+    color: #EB5428;
 }
 
 /*MEDIA QUERIES*/
@@ -348,67 +365,332 @@ label span:after {
         width: 768px;
     }
 
-
-
-    form {
-        left: 50%;
-        bottom: 76%;
+    .header {
+        height: 185px;
+        width: 768px;
     }
 
-    form input {
-        width: 31%;
-    }
-
-    #logo {
-        bottom: 102px;
-        left: -117px;
-        width: 13%;
-        height: 77px;
-    }
-
-    .logoicon {
-        left: 1px;
-        top: 24px;
-    }
-
-    label {
-        cursor: pointer;
-        display: none;
-        padding: 0;
-        position: relative;
-        user-select: none;
-        background-color: white;
-        top: 0;
-    }
-
-    .header ul {
-        overflow: visible;
-        display: flex;
-        max-height: 200px;
-        height: 80px;
-        justify-content: space-between;
-    }
-
-    .header nav ul li {
-        position: relative;
-        right: 150px;
-        padding: 18px;
-    }
-
-    #topitem {
+    #menu {
         visibility: hidden;
     }
 
-    #avatartext {
+    .logoicon {
+        left: -95px;
+        top: -200px;
+        width: 18%;
+    }
+
+    .header a {
         position: relative;
-        bottom: 54px;
-        right: 41px;
-        display: block;
+        left: 100px;
+        width: 80px;
+    }
+
+    #logo {
+        display: inline-block;
+        bottom: -71px;
+        left: 23%;
+    }
+
+    .header ul {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 13px;
+        left: -83px;
+    } 
+
+    #avatar {
+        position: relative;
+        bottom: 120px;
+        right: 151px;
+    }
+
+    #avatartext {
+        top: 61%;
+        right: -28px;
         width: 100px;
     }
 
-    .avataricon {
-        position: relative;
-        bottom: 20px;
-        right: 45px;
+    .dropdown-content {
+        background-color: transparent;
     }
+
+    .dropdown-content span {
+        position: relative;
+        top: 50px;
+        left: 21px;
+    }
+
+    .dropdown-content img {
+        right: -18px;
+        bottom: 37px;
+    }
+
+    form {
+        left: 48%;
+        top: -94%;
+    }
+
+    form input {
+        width: 32%;
+    }
+  
+    .svg {
+        left: 228px;
+    }
+
+    #streettacos {
+        top: 34px;
+    }
+
+    #streettacos h1 {
+        left: 36px;
+        top: 144px;
+    }
+
+    #streettacos ul {
+        position: relative;
+        top: 95px;
+        background: rgba(255, 255, 255, .7);
+        height: 80px;
+    }
+
+    #streettacos a {
+        position: relative;
+        bottom: -22px;
+        left: 56px;
+        color: #EB5428;
+    }
+
+
+    #streettacos svg {
+        padding-right: 88px;
+        position: relative;
+        top: -17px;
+        right: 37px;
+    }
+
+    #details {
+        left: 40%;
+    }
+
+    #directions h1 {
+        text-align: center;
+    }
+
+    #inlineflex {
+        display: inline-flex;
+    }
+
+    #grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .hgroup h2 {
+        left: 130px;
+    }
+
+    .hgroup dt {
+        right: 29px;
+    }
+
+    .hgroup dd {
+        right: 68px;
+    }
+
+    .hgroup svg {
+        left: 129px;
+    }
+
+    #social ul {
+        right: -253px;
+        bottom: 2px;
+    }
+
+    #footer {
+        display: inline-block;
+    }
+
+    footer p {
+        left: -71px;
+        top: 110px;
+    }
+
+    #footer img {
+        width: 41%;
+        left: 76px;
+        bottom: 198px;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    body {
+        width: 1280px;
+    }
+
+    .header {
+        width: 1280px;
+        height: 110px;
+    }
+
+    form {
+        left: 42%;
+        top: -51%;
+    }
+
+    .header ul {
+        top: -31px;
+        left: 45px;
+        width: 73%;
+    }
+
+    #avatar {
+        bottom: 56px;
+        right: -156px;
+    }
+
+    #avatartext {
+        top: 42px;
+        right: -132px;
+    }
+
+    #logo {
+        bottom: -115px;
+        left: -2.6%;
+    }
+
+    .logoicon {
+        top: -150px;
+        left: -20px;
+        width: 19%;
+        height: 110px;
+    }
+
+
+    form input {
+        width: 18%;
+    }
+
+    #streettacos {
+        top: -407px;
+    }
+
+    #streettacos h1 {
+        text-align: center;
+        top: 580px;
+    }
+
+    #streettacosgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        top: -460px;
+        z-index: 0;
+    }
+
+    #streettacos ul {
+        flex-direction: column;
+        background: white;
+        width: 60px;
+        height: 960px;
+        border: solid thin #EB5428;
+        top: 518px;
+        z-index: 1;
+    }
+
+    #streettacos a {
+        bottom: -20px;
+        left: -14px;
+    }
+
+    #streettacos svg {
+        top: 0px;
+        right: 7px;
+    }
+
+    #streettacos p {
+        padding: 10px;
+    }
+
+    #details,
+    #directions,
+    #ingredients,
+    #sidedish {
+        top: -868px;
+    }
+
+    #grid {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .hgroup {
+        bottom: 105px;
+        height: 322px;
+    }
+
+    .hgroup img {
+        width: 65%;
+        position: relative;
+        left: 23px;
+        bottom: 23px;
+      }
+
+    .hgroup h2 {
+        top: 279px;
+        left: 33px;
+    }
+
+    .hgroup dl {
+        left: 62px;
+        bottom: -9px;
+      }
+
+    .hgroup svg {
+        left: 35px;
+        top: 7px;
+    }
+
+    #details {
+        left: 0;
+        background-color: #0d0d0d;
+    }
+
+    #details h1 {
+        position: relative;
+        left: 50%;
+        color: #7ABFBF;
+    }
+
+    #details dl {
+        display: flex;
+        position: relative;
+        right: -131px;
+        bottom: 32px;
+        color: #7ABFBF;
+    }
+
+    #details dd {
+        position: relative;
+        left: -128px;
+        bottom: -25px;
+    }
+
+    #social ul {
+        width: 580px;
+        right: -604px;
+    }
+
+    footer {
+        position: relative;
+        bottom: 868px;
+    }
+
+    footer p {
+        left: 137px;
+        top: -107px;
+    }
+}
