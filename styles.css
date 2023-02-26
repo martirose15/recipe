@@ -398,7 +398,7 @@ li #avatar {
         position: relative;
         top: 13px;
         left: -83px;
-    } 
+    }
 
     #avatar {
         position: relative;
@@ -435,7 +435,7 @@ li #avatar {
     form input {
         width: 32%;
     }
-  
+
     .svg {
         left: 228px;
     }
@@ -637,7 +637,7 @@ li #avatar {
         position: relative;
         left: 23px;
         bottom: 23px;
-      }
+    }
 
     .hgroup h2 {
         top: 279px;
@@ -647,7 +647,7 @@ li #avatar {
     .hgroup dl {
         left: 62px;
         bottom: -9px;
-      }
+    }
 
     .hgroup svg {
         left: 35px;
@@ -694,3 +694,40 @@ li #avatar {
         top: -107px;
     }
 }
+  
+  /* @media print styles */
+  
+  @media print {
+    body {
+      margin: 0.5in;  
+      font-family: Times, serif;
+    }
+  
+    img {
+      display: none;
+    }
+  
+    /* Replace hyperlinks with their full URL */
+    a::after {
+      content: " (" attr(href) ")";
+    }
+  
+    nav {
+      display: none;
+    }
+
+    .header {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+  
+    @page {
+      size: 8.5in 11in;
+      margin: 0.5in;
+    }
+
+  }
+  
